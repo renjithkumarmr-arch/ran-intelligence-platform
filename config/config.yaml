@@ -1,0 +1,25 @@
+app:
+  title: RAN Intelligence Platform
+  refresh_seconds: 15
+  prediction_horizon_minutes: 15
+  history_hours: 24
+thresholds:
+  availability_pct: {warning: 99.5, critical: 99.0, direction: high}
+  dl_throughput_mbps: {warning: 80, critical: 40, direction: high}
+  ul_throughput_mbps: {warning: 25, critical: 10, direction: high}
+  latency_ms: {warning: 20, critical: 35, direction: low}
+  packet_loss_pct: {warning: 1.0, critical: 2.0, direction: low}
+  prb_utilization_pct: {warning: 75, critical: 90, direction: low}
+  rrc_success_pct: {warning: 98.0, critical: 95.0, direction: high}
+  handover_success_pct: {warning: 97.0, critical: 94.0, direction: high}
+  sinr_db: {warning: 12, critical: 7, direction: high}
+weights:
+  availability_pct: 0.15
+  dl_throughput_mbps: 0.15
+  ul_throughput_mbps: 0.08
+  latency_ms: 0.12
+  packet_loss_pct: 0.10
+  prb_utilization_pct: 0.12
+  rrc_success_pct: 0.10
+  handover_success_pct: 0.10
+  sinr_db: 0.08
